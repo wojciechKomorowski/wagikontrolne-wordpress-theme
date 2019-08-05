@@ -1,0 +1,37 @@
+.breadcrumbs__container {
+	padding: .5% 10%;
+	#breadcrumbs {
+		list-style:none;
+		margin:10px 0;
+		overflow:hidden;
+		li	{
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 15px;
+			a {
+				color: $color-accent;
+			}
+		}
+		.separator{
+			font-size: 18px;
+			font-weight: 100;
+			color: #ccc;
+		} 
+	}
+}
+
+@media (max-width: 720px) {
+	.breadcrumbs__container {
+		padding-top: 10%;
+		#breadcrumbs {
+			li	{
+				a {
+					font-size: 12px;
+				}
+			}
+			.separator{
+				font-size: 12px;
+			} 
+		}
+	}
+}

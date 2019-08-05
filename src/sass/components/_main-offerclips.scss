@@ -1,0 +1,155 @@
+.offer-clips {
+	background-color: $color-main;
+	.offer-clips__container {
+		padding: 5% 10%;
+		display: block;
+		margin: 0 auto;
+		.offer-clips__clip {
+			display: inline-block;
+			width: 48%;
+			height: 350px;
+			position: relative;
+			background-color: pink;
+			margin-bottom: 2.5%;
+			.clip__textbox {
+				min-height: 46%;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				transform: translate(0,0);
+				padding: 5%;
+				background-color: rgba(0,0,0, 0.75);
+				color: white;
+				a {
+					color: white;
+					@extend %transition-basic;
+					.textbox__title {
+						font-size: 1.75rem;
+						padding-bottom: 1.5%;
+					}
+					&:hover {
+						color: $color-main;
+					}
+				}
+				p {
+					@extend %text-line-height;
+				}
+			}
+			&:nth-of-type(1) {
+				background: lightblue url("../images/c60-waga.jpg") no-repeat;
+				background-size: cover;
+				margin-right: 2%;
+			}
+			&:nth-of-type(2) {
+				background: lightblue url("../images/cassel-metal-detector.jpg") no-repeat;
+				background-size: cover;
+			}
+			&:nth-of-type(3) {
+				background: lightblue url("../images/c80-combo.jpg") no-repeat;
+				background-size: cover;
+				margin-right: 2%;
+			}
+			&:nth-of-type(4) {
+				background: lightblue url("../images/cassel-x-ray.jpg") no-repeat;
+				background-size: cover;
+			}
+		}
+	}
+}
+
+.offer-description {
+	padding: 5% 10%;
+}
+
+.offer-clips-2 {
+	.offer-clips__container{
+		.offer-clips__clip {
+			width: 31%;
+			margin: 1% !important;
+			.clip__textbox {
+				min-height: 0;
+				width: 100%;
+			}
+			&:nth-of-type(1) {
+				background: lightblue url("../images/c60-waga.jpg") no-repeat;
+				background-size: cover;
+				margin-right: 2%;
+			}
+			&:nth-of-type(2) {
+				background: lightblue url("../images/cassel-metal-detector.jpg") no-repeat;
+				background-size: cover;
+			}
+			&:nth-of-type(3) {
+				background: lightblue url("../images/c80-combo.jpg") no-repeat;
+				background-size: cover;
+				margin-right: 2%;
+			}
+			&:nth-of-type(4) {
+				background: lightblue url("../images/cassel-x-ray.jpg") no-repeat;
+				background-size: cover;
+			}
+			&:nth-of-type(5) {
+				background: lightblue url("../images/grader-clip.jpg") no-repeat;
+				background-size: cover;
+				background-position: right;
+			}
+			&:nth-of-type(6) {
+				background: lightblue url("../images/system-eliminacji-uchylny-clip.jpg") no-repeat;
+				background-size: cover;
+				background-position: right;
+			}
+			&:nth-of-type(7) {
+				background: lightblue url("../images/ls150-clip.jpg") no-repeat;
+				background-size: cover;
+			}
+			&:nth-of-type(8) {
+				background: lightblue url("../images/wpl-clip.jpg") no-repeat;
+				background-size: cover;
+				background-position: center;
+			}
+			&:nth-of-type(9) {
+				background: lightblue url("../images/d43-clip.jpg") no-repeat;
+				background-size: cover;
+				background-position: center;
+			}
+			&:nth-of-type(10) {
+				background: lightblue url("../images/hm3000.jpg") no-repeat;
+				background-size: cover;
+				background-position: center;
+			}
+		}
+	}
+}
+
+@media (max-width: 1125px) {
+	.offer-clips-2 {
+		.offer-clips__container{
+			.offer-clips__clip {
+				width: 47%;
+			}
+		}
+	}
+}
+
+@media (max-width: 720px) {
+	.offer-clips {
+		.offer-clips__container {
+			justify-content: center;
+			.offer-clips__clip {
+				width: 100%;	
+				.clip__textbox {
+					min-height: 0;
+					a {
+						.textbox__title {
+							font-size: 1.5rem;
+							padding-bottom: 2.5%;
+						}
+					}
+					p {
+						font-size: 14px;
+					}
+				}
+			}	
+		}
+	}
+}

@@ -1,0 +1,60 @@
+.main-individual-offer {
+	background: lightblue url("../images/individual-offer.jpg") no-repeat fixed center;
+	.main-individual-offer__container {
+		padding: 5% 10%;
+		position: relative;
+		z-index: 1;
+		.main-individual-offer__title {
+			font-size: 3.5rem;
+			font-weight: 700;
+			padding-bottom: 2.5%;
+			color: white;
+		}
+		.main-individual-offer__subtitle {
+			font-size: 2rem;
+			padding-bottom: 2.5%;
+			color: white;
+		}
+		.main-individual-offer__text {
+			@extend %text-line-height;
+			color: white;
+			padding-bottom: 2.5%;
+		}
+		.main-individual-offer__button {
+			background-color: $color-main;
+			padding: 2.5% 5%;
+			border: none;
+			font-size: 1.25rem;
+			font-weight: 700;
+			color: white;
+			text-shadow: 1px 1px darken($color-main, 7%);
+			cursor: pointer;
+			display: inline-block;
+			@extend %transition-basic;
+			&:hover {
+				background-color: $color-accent;
+			}
+		}
+	}
+}
+
+@media (max-width: 720px) {
+	.main-individual-offer {
+		background-attachment: scroll;
+		.main-individual-offer__container {
+			.main-individual-offer__title {
+				font-size: 1.5rem;
+			}
+			.main-individual-offer__subtitle {
+				font-size: 1rem;
+				padding-bottom: 5%;
+			}
+			.main-individual-offer__text {
+				font-size: 14px;
+			}
+			.main-individual-offer__button {
+				font-size: 1rem;
+			}
+		}
+	}	
+}

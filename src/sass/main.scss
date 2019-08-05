@@ -1,0 +1,32 @@
+//Importing all scss files
+
+//External libraries
+@import "slickfix";
+@import "~slick-carousel/slick/slick";
+@import "~slick-carousel/slick/slick-theme";
+
+//Base files
+@import 'base/variables';
+@import 'base/mixins';
+@import 'base/extends';
+@import 'base/reset';
+@import 'base/root';
+@import 'base/layout';
+@import 'base/animations';
+	
+//Component Files
+@import 'components/menu';
+@import 'components/breadcrumbs';
+@import 'components/header-slider';
+@import 'components/topbar';
+@import 'components/main-offerclips';
+@import 'components/main-description';
+@import 'components/main-individual-offer';
+@import 'components/main-cooperation';
+@import 'components/main-ourproducts';
+@import 'components/main-video';
+@import 'components/general-content';
+@import 'components/contactpage';
+
+
+@import 'components/footer';

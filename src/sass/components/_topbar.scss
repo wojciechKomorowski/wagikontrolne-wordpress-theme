@@ -1,0 +1,55 @@
+.topbar {
+	background-color: $color-accent;
+	.topbar__container {
+	padding: 1% 10%;
+	@extend %flex-container;
+	justify-content: space-between;
+		.topbar__contact-detail {
+			text-transform: uppercase;
+			@extend %flex-container;
+			i {
+				color: $color-main;
+				font-size: 1.5rem;
+			}
+			p {
+				display: inline-block;
+				color: white;
+				font-size: 0.75rem;
+			}
+			.contact-detail__phone {
+				color: white;
+				font-size: 1rem;
+			}
+			a {
+				@extend %transition-basic;
+				color: white;
+				&:hover {
+					color: $color-main;
+				}
+			}
+		}
+	}
+} 
+
+@media (max-width: 720px) {
+	.topbar {
+		margin-bottom: 5%;
+		.topbar__container {
+			.topbar__contact-detail {
+				width: 100%;
+				text-align: center;
+				i {
+					font-size: 0.75rem;
+					width: 100%;
+				}
+				p {
+					font-size: 0.75rem;
+					display: block;
+				}
+				.contact-detail__phone {
+					font-size: 0.75rem;
+				}	
+			}
+		}
+	}
+}

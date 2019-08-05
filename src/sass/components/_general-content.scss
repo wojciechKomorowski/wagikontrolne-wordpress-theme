@@ -1,0 +1,226 @@
+.header__container {
+	padding: 2.5% 10%;
+	background-color: $color-main;
+	text-align: center;
+	.header__main-title {
+		color: white;
+	}
+}
+
+.content {
+	background-color: gainsboro;
+	padding: 0 10%;
+}
+
+.content__container {
+	background-color: white;
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 5%;
+	@extend %text-line-height;
+	.wp-block-image {
+		width: 80%;
+		margin: 0 auto;
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	.inline__container {
+		text-align: center;
+		.inline-block-2 {
+			width: 49%;
+			display: inline-block;
+			vertical-align: bottom;
+		}
+		.inline-block-3 {
+			width: 30%;
+			@extend .inline-block-2
+		}
+	}
+	ul {
+		list-style: none;
+		padding-left: 2%;
+		li {
+			background:url('../images/right-arrow.png') no-repeat left center; 
+			padding-left: 40px;
+			margin-bottom: 1.5%;
+			&:last-child {
+			padding-bottom: 0;
+			}
+		}
+		
+	}
+	.checkweighers-table {
+		width: 100%;
+		text-align: center;
+		thead, tfoot {
+			background-color: #246712;
+			color: white;
+			font-size: 1.25rem;
+		}
+		tfoot {
+			background-color: #45C920;
+		}
+		td {
+			padding: 10px;
+			font-weight: 700;
+			border: 1px solid gray;
+		}
+		tbody {
+			tr {
+				td:first-of-type {
+					color: white;
+					background-color: gray;
+				}
+			}
+		}
+	}
+	.metal-detectors-table {
+		width: 100%;
+		text-align: center;
+		thead {
+			background-color: $color-accent;
+			color: white;
+			font-size: 1.25rem;
+		}
+		tfoot {
+			background-color: #68C2F3;
+		}
+		td {
+			padding: 10px;
+			font-weight: 700;
+			border: 1px solid gray;
+		}
+		tbody {
+			tr:nth-child(even) {
+				color: white;
+				background-color: gray;
+			}
+			tr td:first-child {
+				color: $color-accent;
+				background-color: white;
+			}
+		}
+	}
+	h2 {
+		color: $color-main;
+	}	
+	.checkweighers-clips {
+		text-align: center;
+		.checkweighers-clips__clip {
+			display: inline-block;
+			padding: 0 3.5% 3.5% 3.5%;
+			.clip__checkweigher {
+				border: 3px solid $color-accent;
+				width: 200px;
+				height: 200px;
+				border-radius: 50%;
+				cursor: pointer;
+				@extend %transition-basic;
+			}
+			a {
+				color: $color-accent;
+				font-size: 1.25rem;
+				font-weight: 700;
+				@extend %transition-basic;
+			}
+			&:nth-of-type(1) .clip__checkweigher {
+				background: white url("../images/c80-clip.jpg") no-repeat;
+				background-size: 90%;
+				background-position: 90% 45%;
+			}
+			&:nth-of-type(2) .clip__checkweigher {
+				background: white url("../images/c60-clip.jpg") no-repeat;
+				background-size: cover;
+				background-position: center;
+			}
+			&:nth-of-type(3) .clip__checkweigher {
+				background: white url("../images/c20-clip.jpg") no-repeat;
+				background-size: cover;
+				background-position: center;
+			}
+			&:hover > a {
+				color: $color-main;
+			}
+			&:hover .clip__checkweigher {
+				border: 3px solid $color-main;
+			}
+		}
+	}
+	.video__single-video {
+		text-align: center;
+		figure {
+			figcaption {
+				@extend %video-figcaption;
+			}
+		}
+	}
+}
+
+@media (max-width: 720px) {
+	.header__container {
+		.header__main-title {
+			font-size: 1rem;
+			padding: 20px 0;
+		}
+	}
+	
+	.content {
+		padding: 0;
+	}
+	
+	.content__container {
+		padding: 5%;
+		.checkweighers-clips {
+			.checkweighers-clips__clip {
+				.clip__checkweigher {
+					width: 120px;
+					height: 120px;
+				}	
+			}
+		}
+		.inline__container {
+			text-align: center;
+			.inline-block-2 {
+				width: 80%;
+			}
+			.inline-block-3 {
+				width: 80%;
+			}
+		}
+		.checkweighers-table {
+			thead, tfoot {
+				font-size: 12px;
+			}
+			td {
+				padding: 1px;
+				font-size: 9px;
+			}
+		}
+		.metal-detectors-table {
+			thead {
+				font-size: 12px;
+			}
+			tfoot {
+				font-size: 12px;
+			}
+			td {
+				padding: 1px;
+				font-size: 10px;
+				img {
+					width: 24px;
+					height: auto;
+				}
+			}
+		}
+		p, li {
+			font-size: 14px;
+		}
+		.video__single-video {
+			iframe {
+				width: 100%;
+			}
+		}
+	}
+}

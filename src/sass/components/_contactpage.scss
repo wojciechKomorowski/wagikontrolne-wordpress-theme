@@ -1,0 +1,22 @@
+.contactpage-block {
+	text-align: center;
+	display: inline-block;
+	vertical-align: top;	
+	width: 45%;
+	img {
+		width: 20%;
+	}
+	img.image-border {
+		border: 1px solid gray;
+		box-sizing: content-box;
+	}
+}
+
+@media (max-width: 720px) {
+	.contactpage-block {
+		width: 100%;
+		img {
+			width: 30%;
+		}
+	}
+}

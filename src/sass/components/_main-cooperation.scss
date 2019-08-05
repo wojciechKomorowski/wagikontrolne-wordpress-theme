@@ -1,0 +1,58 @@
+.main-cooperation {
+	margin: 0 auto;
+	width: 100%;
+	padding: 2.5% 10%;
+	padding-bottom: 5%;
+	.main-cooperation__title {
+		font-size: 3.5rem;
+		font-weight: 700;
+		color: $color-main;
+		padding-bottom: 2.5%;
+	}
+	.main-cooperation__slider {
+		@extend %flex-container;
+		div {
+			width: 100%;
+			height: 200px;
+			position: relative;
+			img {
+				position: absolute;
+				margin: auto;
+				width: 80%;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+			}
+		}
+		.slick-next {
+			right: -40px;
+			color: transparent;
+		}
+		.slick-prev {
+			left: -40px;
+			z-index: 999;
+		}
+		.slick-prev:before, .slick-next:before {
+			font-family: "slick";
+			font-size: 20px;
+			line-height: 1;
+			color: $color-accent;
+			opacity: 1;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			@extend %transition-basic;
+		}
+		.slick-prev:hover:before, .slick-next:hover:before {
+			color: $color-main;
+		}
+	}
+}
+
+@media (max-width: 720px) {
+	.main-cooperation {
+		.main-cooperation__title {
+			font-size: 1.5rem;
+		}
+	}
+}

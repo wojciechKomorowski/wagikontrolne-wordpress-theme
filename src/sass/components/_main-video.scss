@@ -1,0 +1,36 @@
+.main-video {
+	.main-video__container {
+		padding: 5% 10%;
+		.main-video__single-video {
+			display: inline-block;
+			vertical-align: top;	
+			width: 45%;
+			color: $color-text;
+			padding-bottom: 2.5%;
+			&:nth-child(3) {
+				padding-bottom: 0;
+			}
+			&:nth-child(4) {
+				padding-bottom: 0;
+			}
+			&:nth-child(odd) {
+				margin-right: 9%;
+			}
+			figure {
+				figcaption {
+					@extend %video-figcaption;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 720px) {
+	.main-video {
+		.main-video__container {
+			.main-video__single-video {	
+				width: 100%;
+			}
+		}
+	}
+}
